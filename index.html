@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto" rel="stylesheet">
+    <style>
+      body, h1, h2, h3 {
+        margin: 0;
+      }
+
+      .ability-card {
+        width: 600px;
+        height: 420px;
+        background: url("./Ability.png");
+        background-size: 600px 420px;
+        overflow: hidden;
+      }
+
+      .ability-card hgroup {
+        display: table;
+      }
+
+      .ability-card .title,
+      .ability-card .subtitle,
+      .ability-card .aside,
+      .ability-card .value {
+        display: table-cell;
+        font-family: "Roboto Slap", "Georgia";
+        line-height: 0.8;
+        vertical-align: middle;
+      }
+
+      .ability-card .subtitle {
+        font-size: 22px;
+        padding: 9px 0 38px 139px;
+        height: 35px;
+        width: 100%;
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-shadow: 0 0 2px #666;
+      }
+
+      .ability-card .aside {
+        font-size: 14px;
+        padding: 9px 10px 38px 10px;
+        height: 35px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-shadow: 0 0 2px #666;
+        text-align: center;
+      }
+
+      .ability-card .value {
+        font-size: 32px;
+        height: 60px;
+        width: 95px;
+        text-align: center;
+      }
+
+      .ability-card .title {
+        font-size: 32px;
+        padding: 0 0 0 55px;
+        height: 60px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-shadow: 0 0 2px #666;
+      }
+
+      .ability-card .content {
+        font-size: 23px;
+        display: table-cell;
+        padding: 34px 16px 0 134px;
+        height: 220px;
+        font-family: "Roboto", "Helvetica";
+        vertical-align: middle;
+      }
+
+      .ability-card .content table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .ability-card .content table th {
+        border-bottom: 1px solid black;
+      }
+
+      .ability-card .content table th,
+      .ability-card .content table td {
+        text-align: center;
+      }
+
+      .ability-card .content table th:not(:first-of-type),
+      .ability-card .content table td:not(:first-of-type) {
+        border-left: 1px solid black;
+      }
+
+      .feat-card {
+        width: 420px;
+        height: 600px;
+        background: url("./Feat.png");
+        background-size: 420px 600px;
+        font-family: "Roboto", "Helvetica";
+        overflow: hidden;
+      }
+
+      .feat-card .title {
+        font-size: 22px;
+        padding-top: 7px;
+        height: 40px;
+        font-family: "Roboto Slap", "Georgia";
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: 0 0 2px #666;
+      }
+
+      .feat-card .content-top,
+      .feat-card .content-bottom {
+        display: table;
+        height: 160px;
+        padding-right: 35px;
+        padding-bottom: 70px;
+        padding-left: 35px;
+        text-align: center;
+      }
+
+      .feat-card .content-top {
+        padding-top: 30px;
+      }
+
+      .feat-card .content-bottom {
+        padding-top: 70px;
+      }
+
+      .feat-card .content {
+        font-size: 23px;
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .feat-card .content .paragraph-title {
+        font-size: 23px;
+        display: inline-block;
+        font-weight: bold;
+      }
+
+      .feat-card .content .paragraph-title::after {
+        content: "–";
+        display: inline-block;
+        margin-left: 5px;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="feat-card">
+      <h1 class="title">Lyanne Larysse de la Loire</h1>
+      <div class="content-top">
+        <div class="content">
+          <h2 class="paragraph-title" contenteditable>Circle Around</h2>
+          <span contenteditable>Play this card if Jagger is in a passage space. Roll two dice and place
+          Jagger in the passage space that matches one of the results rolled.</span>
+        </div>
+      </div>
+      <div class="content-bottom">
+        <div class="content">
+          <h2 class="paragraph-title" contenteditable>Assault</h2>
+          <span contenteditable>Play this card to make both melee and ranged attacks during a turn that
+          you walk.</span>
+        </div>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="ability-card">
+      <hgroup>
+        <h2 class="subtitle">Crede</h2>
+        <h3 class="aside">Ability</h3>
+      </hgroup>
+      <hgroup>
+        <h4 class="value"></h4>
+        <h1 class="title" contenteditable>Rescue Dog</h1>
+      </hgroup>
+      <div class="content" contenteditable>
+        You can discard a Feat card to partially revive another hero in Jagger's
+        space. The hero flips one heart token to red and is no longer incapacitated.
+
+        If you discard two cards to use this ability, the hero flips d6 heart
+        tokens back to red instead of one.
+
+        The hero flips one heart token to red and is no longer incapacitated.
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="ability-card">
+      <hgroup>
+        <h2 class="subtitle">Lyanne Larysse de la Loire</h2>
+        <h3 class="aside">Skill</h3>
+      </hgroup>
+      <hgroup>
+        <h4 class="value">7</h4>
+        <h1 class="title">Detection</h1>
+      </hgroup>
+      <div class="content">
+        <table>
+          <thead>
+            <tr>
+              <th>Stat</th>
+              <th>Stat Value</th>
+              <th>Skill Level</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PER</td>
+              <td>5</td>
+              <td>2</td>
+              <td>7</td>
+            </tr>
+          </tbody>
+        </table>
+
+        Whether
+        scoping out a dark corner to detect a hidden foe or combing the scene
+        of a battle to discern the nature of the combatants, a keenly perceptive
+        character can glean information hidden from less astute eyes.
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="ability-card">
+      <hgroup>
+        <h2 class="subtitle">Lyanne Larysse de la Loire</h2>
+        <h3 class="aside">Spell</h3>
+      </hgroup>
+      <hgroup>
+        <h4 class="value">2</h4>
+        <h1 class="title">Rune Shot: Phantom Seeker</h1>
+      </hgroup>
+      <div class="content">
+        <table>
+          <thead>
+            <tr>
+              <th>COST</th>
+              <th>RNG</th>
+              <th>AOE</th>
+              <th>POW</th>
+              <th>UP</th>
+              <th>OFF</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2</td>
+              <td>6</td>
+              <td>–</td>
+              <td>–</td>
+              <td>YES</td>
+              <td>NO</td>
+            </tr>
+          </tbody>
+        </table>
+
+        The spellcaster’s next rune shot ranged attack this turn ignores LOS
+        when making ranged attacks. The attack also ignores concealment and
+        cover.
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="ability-card">
+      <hgroup>
+        <h2 class="subtitle">Lyanne Larysse de la Loire</h2>
+        <h3 class="aside">Benefit</h3>
+      </hgroup>
+      <hgroup>
+        <h4 class="value"></h4>
+        <h1 class="title">Fast Caster</h1>
+      </hgroup>
+      <div class="content">
+        The character gains one extra quick action each activation that can be
+        used only to cast a spell.
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="ability-card">
+      <hgroup>
+        <h2 class="subtitle">Lyanne Larysse de la Loire</h2>
+        <h3 class="aside">Ability</h3>
+      </hgroup>
+      <hgroup>
+        <h4 class="value"></h4>
+        <h1 class="title">Privilege</h1>
+      </hgroup>
+      <div class="content">
+        Whether he was born into an ancient bloodline or a family that purchased
+        status, this character is afforded the rights of a noble. He is immune
+        to persecution for petty crimes and can be tried only by a court of his
+        peers. Should he be found guilty of a high crime, he has the right to be
+        executed in the style beftting a noble.
+      </div>
+    </div>
+
+  </body>
+</html>
